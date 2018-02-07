@@ -1,12 +1,12 @@
 var game = {
   count: 0,
-  possibilities: ['#green','#blue', '#red', '#dark'],
+  possibilities: ['#green','#blue', '#red', '#orange'],
   currentGame: [],
   player: [],
   sound:{
     blue: new Audio('./mp3/sounds_01.mp3'), 
     red: new Audio('./mp3/sounds_02.mp3'), 
-    dark: new Audio('./mp3/sounds_03.mp3'), 
+    orange: new Audio('./mp3/sounds_03.mp3'), 
     green: new Audio('./mp3/sounds_04.mp3')
   },
   strict: false,
@@ -20,18 +20,6 @@ function clearGame() {
 
 function newGame() {
   clearGame();
-}
-
-function strict() {
-  if (game.strict == false) {
-    game.strict = true;
-    $('#strict').html('Is currently On').removeClass('btn-primary').addClass('btn-danger');
-  } else {
-    game.strict = false;
-    $('#strict').html('Is currently Off').removeClass('btn-danger').addClass('btn-primary');
-  }
-  
-  newGame();
 }
 
 function showMoves() {
@@ -58,8 +46,8 @@ function sound(name) {
     case '#red':
       game.sound.red.play();
       break;
-    case '#dark':
-      game.sound.dark.play();
+    case '#orange':
+      game.sound.orange.play();
       break;
   };
 }
