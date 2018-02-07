@@ -1,0 +1,123 @@
+@black: #434447;
+@green: #39965c;
+@blue: #3b4c99;
+@red: #963954;
+@orange: #e0a226;
+@aqua: #20aaa3;
+
+@buttonWidth: 90px;
+
+@import 'https://fonts.googleapis.com/css?family=Muli';
+
+body {
+  background-color: @black;
+  color: white;
+  font-family: 'Muli', sans-serif;
+}
+
+.gamefield {
+  max-width: 480px;
+  margin: 20px auto;
+}
+
+.align {
+  display: flex;
+  justify-content: center;
+}
+
+.top-row {
+  .align;
+}
+
+.middle-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 15px auto;
+}
+
+.bottom-row {
+  .align;
+}
+
+.btn{
+    border-radius: 50%;
+    height: 60px;
+    background-color: @aqua;
+}
+
+.btn:hover{
+    box-shadow: 0px 0px 15px @aqua;
+}
+
+.gamebutton {
+  width: @buttonWidth;
+  height: @buttonWidth;
+  border-radius: 25%;
+}
+
+.border(@color) {
+  border: 4px solid @color;
+  margin: 20px;
+}
+
+.onhover(@color) {
+  background-color: @color;
+}
+
+#blue {
+  .border(@blue);
+}
+
+#green {
+  .border(@green);
+}
+
+#red {
+  .border(@red);
+}
+
+#orange {
+  .border(@orange);
+}
+
+#blue.hover {
+  .onhover(@blue);
+}
+
+#green.hover {
+  .onhover(@green);
+}
+
+#red.hover {
+  .onhover(@red);
+}
+
+#orange.hover {
+  .onhover(@orange);
+}
+
+.btn-sett {
+  font-size: 2.7em;
+  text-align: left;
+  transition: 500ms;
+  width: 70px;
+  margin-right: 340px;
+  &:hover {
+    color:  @green;
+  }
+}
+
+.modal-title {
+  .black;
+}
+
+.black {
+  color: @black;
+  text-align: center;
+}
+
+#strict {
+  margin: 5px auto;
+  text-align: center;
+}
